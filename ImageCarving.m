@@ -1,6 +1,6 @@
 function Ic = ImageCarving(N)
 
-% N: number of vertical seams you have to remove
+% N: number of vertical seams we have to remove
 
 
 % read image
@@ -23,7 +23,7 @@ for iIter = 1:N
     
     M = zeros(size(Ig)); % cumulative energy%value matrix
     
-    % your CODE starts here
+    % CODE starts here
     P = zeros(size(Ig));%path matrix
     M(1,:) = E(1,:);
     [re,ce] = size(E);
