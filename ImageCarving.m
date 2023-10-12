@@ -1,7 +1,7 @@
-function Ic = ImageCarving(N)
+function Ic = ImageCarving()
 
 % N: number of vertical seams we have to remove
-
+N = 200
 
 % read image
 I = im2double(imread('waterfall.png'));
@@ -95,11 +95,13 @@ for k = re:-1:1
     end
 end
 Ic = Ic2;
-    % your CODE ends here
+
 
 
 end
 
+% Save the carved image to a file
+imwrite(Ic, 'carved_image.png');
 
 figure(1),imshow(I);
 figure(2),imshow(Ic);
